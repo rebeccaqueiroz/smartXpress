@@ -1,0 +1,291 @@
+.carousel {
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.carousel h2 {
+  margin-bottom: 20px;
+}
+
+.swiper {
+  width: 100%;
+  max-width: 1000px;
+  margin: auto;
+  padding-bottom: 40px;
+  overflow: hidden; 
+}
+
+
+.swiper-wrapper {
+  display: flex;
+}
+
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+}
+
+
+.carousel-item {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 260px;
+  text-align: left;
+}
+
+.carousel-item img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.product-name {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 8px 0 4px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.product-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product-info .info-text {
+  flex-grow: 1;
+}
+
+.product-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-fav, .btn-cart {
+  width: 28px !important;
+  height: 28px !important;
+  /* padding: 6px !important; */
+  font-size: 16px !important;
+  border-radius: 5px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.btn-fav i, .btn-cart i {
+  font-size: 14px !important;
+}
+
+.btn-fav:hover, .btn-cart:hover {
+  background-color: #0056b3;
+}
+
+
+.product-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.info-text {
+    margin: 0;
+    font-size: 18px;
+}
+
+.info-text .price {
+    margin: 2px 0 0;
+    font-weight: bold;
+    color: #007BFF;
+}
+
+.product-actions {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* Scrollbar estilizada (opcional) */
+.carousel-container::-webkit-scrollbar {
+  height: 8px;
+}
+.carousel-container::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 10px;
+}
+
+.product-actions button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.product-actions button i {
+    font-size: 18px;
+    color: white;
+}
+
+/* Hover effects */
+.btn-fav:hover {
+  background-color: #ffcccc;
+}
+.btn-fav:hover i {
+  color: #e60000;
+}
+
+.btn-cart:hover {
+  background-color: #d4edda;
+}
+.btn-cart:hover i {
+  color: #28a745;
+}
+
+/* Optional: little animation */
+.product-actions button:hover {
+  transform: scale(1.2);
+}
+
+.carousel-item img {
+    width: 250px;
+    height: auto;
+    border-radius: 10px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+header {
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+nav img {
+    height: 50px;
+}
+
+.menu-icon {
+  display: none;
+  cursor: pointer;
+  font-size: 24px;
+  color: #333;
+}
+
+/* Menu escondido inicialmente */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #007BFF;
+  font-weight: bold;
+}
+
+.search-bar {
+    margin-top: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+input[type="text"] {
+    padding: 4px;
+    width: 250px;
+    border: 1px solid #d68d8d;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+}
+
+button {
+    padding: 4px 12px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+/* Menu mobile */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #f2f2f2;
+    width: 100%;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+}
+
+button i {
+    font-size: 8px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+footer {
+    width: 100%;
+    background-color: #0056b3;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 40px;
+    position: relative;
+    left: 0;
+}
+
+.footer p {
+    font-size: 10px;
+    color: white;
+    margin: 0;
+}
+
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons a {
+  color: white;
+  margin: 0 8px;
+  font-size: 20px;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #ccc;
+}
+
