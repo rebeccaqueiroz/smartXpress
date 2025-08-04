@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #007BFF, #3399ff, #0069d9, #0056b3, #003f88);
+}
+
+.container form {
+    width: 700px;
+    padding: 40px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+    font-size: 24px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #0056b3;
+    margin-bottom: 5px;
+}
+
+.btn {
+    width: 100%;
+    padding: 10px;
+    margin: 25px 0;
+    background: #0056b3;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: .5s ease;
+}
+
+
+.input-box img {
+    height: 50px;
+    margin-top: 5px;
+}
+.btn:hover {
+    background: #004494;
+}
+
+form .row {
+    display: flex;
+    gap: 15px;
+}
+
+.row .column {
+    flex: 1 1 250px;
+}
+
+.flex .input-box {
+    margin-top: 5px;
+}
+
+.column .flex {
+    display: flex;
+    gap: 15px;
+}
+
+.column .input-box {
+    width: 100%;
+    margin: 15px 0;
+}
+
+.input-box label {
+    display: block;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 15px;
+}
