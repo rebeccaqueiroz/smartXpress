@@ -1,0 +1,375 @@
+/* RESET CSS básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  flex: 1;
+}
+
+header {
+  background-color: #f2f2f2;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+nav img {
+  height: 50px;
+}
+
+.menu-icon {
+  display: none;
+  cursor: pointer;
+  font-size: 24px;
+  color: #333;
+}
+
+/* Menu escondido inicialmente */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #007BFF;
+  font-weight: bold;
+}
+
+.nav-links li a:hover {
+  color: #024892;
+  font-weight: bold;
+}
+.search-bar {
+  margin-top: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+input[type="text"] {
+  padding: 4px;
+  width: 250px;
+  border: 1px solid #ffffff;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+}
+
+button {
+  padding: 4px 12px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+
+/* Menu mobile */
+@media (max-width: 768px) {
+  .nav-links {
+  display: none;
+  position: absolute;
+  top: 60px;
+  right: 0;
+  background-color: #f2f2f2;
+  width: 100%;
+  flex-direction: column;
+  padding: 20px;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-links.active {
+  display: flex;
+  }
+
+  .menu-icon {
+  display: block;
+  }
+}
+
+button i {
+  font-size: 12px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+
+.filtro-categorias {
+  margin-top: 20px;
+}
+
+.filtro-categorias h3 {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.filtro-categorias label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.filtro-categorias input[type="checkbox"] {
+  margin-right: 2px;
+  cursor: pointer;
+}
+
+.container {
+  margin-top: 20px;
+  padding: 0 18px;
+  flex: 1;
+}
+
+.container h2 {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.filtro-lateral .search {
+    width: 130px;
+    padding: 4px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    margin-bottom: 5px;
+}
+
+.filtro-lateral .bx  .bx-search-alt-2 {
+    font-size: 16px;
+    padding: 10px;
+    color: #007BFF;
+    cursor: pointer;
+}
+
+.filtro-preco {
+  margin-top: 20px;
+}
+
+.filtro-preco h3 {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.filtro-preco label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.filtro-lateral input[type="text"] {
+    width: 100px;
+    padding: 4px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.filtro-lateral {
+    width: 200px;
+    padding: 20px;
+    background-color: #f2f2f2;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.164);
+    height: calc(100vh - 100px); /* Altura ajustada para evitar conflito com footer */
+    box-sizing: border-box;
+    position: fixed;
+    top: 100px;
+    left: 0;
+}
+
+
+footer {
+  width: 100vw;
+  background: linear-gradient(135deg, #007BFF, #3399ff, #0069d9, #0056b3, #003f88);
+  padding: 20px 0;
+  text-align: center;
+  position: relative;
+  left: 0;
+  box-sizing: border-box;
+}
+
+.footer p {
+  font-size: 12px;
+  padding: 5px;
+  color: white;
+  margin: 0;
+}
+
+.social-icons {
+  margin-top: 10px;
+}
+
+.social-icons a {
+  color: white;
+  margin: 0 8px;
+  font-size: 20px;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #ccc;
+}
+
+.produtos {
+  margin-left: 220px;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(145px, 250px));
+  gap: 16px;
+  min-height: 80vh;
+  align-items: stretch;
+}
+
+.produtos h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  align-items: center;
+  justify-content: center;
+}
+.produtos .item {
+  border-radius: 8px;
+  padding: 8px;
+  max-height: 320px;
+  border: 1px solid #ccc;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #fff;
+  transition: transform 0.2s ease;
+}
+
+.produtos .item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.produtos .product-info {
+  margin-top: 10px;
+  display: flex;
+}
+
+.produtos .item img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.product-name {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 8px 0 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.product-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product-info .info-text {
+  flex-grow: 1;
+}
+
+.product-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-fav, .btn-cart {
+  width: 28px !important;
+  height: 28px !important;
+  padding: 10px 20px !important;
+  font-size: 16px !important;
+  border-radius: 5px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.btn-fav i, .btn-cart i {
+  font-size: 14px !important;
+}
+
+.product-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.info-text {
+  margin: 0;
+  font-size: 18px;
+}
+
+.info-text .price {
+  margin: 2px 0 0;
+  font-weight: bold;
+  color: #007BFF;
+}
+
+.product-actions {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Hover effects */
+.btn-fav:hover {
+  background-color: #ffcccc;
+}
+.btn-fav:hover i {
+  color: #e60000;
+}
+
+.btn-fav.favoritado {
+  background-color: #ffcccc;
+}
+.btn-fav.favoritado i {
+  color: #e60000;
+}
+
+.btn-cart:hover {
+  background-color: #d4edda;
+}
+.btn-cart:hover i {
+  color: #28a745;
+}
+
+.btn-cart.selected {
+  background-color: #d4edda;
+}
+.btn-cart.selected i {
+  color: #28a745;
+}
+
+/* Optional: little animation */
+.product-actions button:hover {
+  transform: scale(1.2);
+}
