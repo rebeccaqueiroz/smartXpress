@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #007BFF, #3399ff, #0069d9, #0056b3, #003f88);
+}
+
+.btn-continue-shopping {
+    background-color: #005fc5;
+    color: rgb(255, 255, 255);
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.btn-continue-shopping:hover {
+    background: rgb(0, 56, 121);
+}
+
+.pedidos {
+    margin-top: 0px; /* deixa o link próximo do botão */
+    display: inline-block; /* garante que o margin-top funcione */
+    text-decoration: none;
+    color: #014c9c;
+    font-weight: 400;
+}
+
+/* Container principal */
+.checkout-sucess {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    gap: 0; /* sem espaçamento entre as caixas */
+    width: 80%; /* ocupa boa parte da tela */
+    max-width: 900px;
+    height: 450px;
+}
+
+/* Caixa da ação */
+.checkout-actions {
+    background: #ffffff;
+    flex: 1; /* ocupa metade do container */
+    padding: 50px;
+    border-radius: 0px 15px 15px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Caixa da confirmação da compra */
+.compra-realizada {
+    background: #005fc5;
+    flex: 1; /* ocupa metade do container */
+    padding: 50px;
+    border-radius: 15px 0px 0px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.compra-realizada i {
+    font-size: 100px;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.compra-realizada h1 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 10px;
+    line-height: 1.3;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.compra-realizada h1 span {
+    white-space: nowrap; /* evita quebra de linha extra */
+}
+
+.compra-realizada h1 span,
+.checkout-actions p,
+.btn-continue-shopping,
+.pedidos {
+    white-space: nowrap; /* cada frase não quebra internamente */
+}
+
+/* Ajustes gerais para telas menores */
+@media (max-width: 768px) {
+    .checkout-sucess {
+        flex-direction: column; /* empilha as caixas */
+        width: 90%;
+        max-width: 400px; /* largura máxima do bloco no celular */
+        height: 450px; /* mantém altura total igual ao desktop */
+    }
+
+    .compra-realizada {
+        flex: 1; /* ocupa metade da altura */
+        width: 100%;
+        border-radius: 15px 15px 0 0; /* só bordas de cima arredondadas */
+        padding: 20px;
+        margin-bottom: 0; /* sem espaçamento entre as caixas */
+    }
+
+    .checkout-actions {
+        flex: 1; /* ocupa metade da altura */
+        width: 100%;
+        border-radius: 0 0 15px 15px; /* só bordas de baixo arredondadas */
+        padding: 20px;
+    }
+
+    .compra-realizada i {
+        font-size: 70px;
+    }
+
+    .compra-realizada h1 {
+        font-size: 22px; 
+    }
+
+    .checkout-actions p {
+        font-size: 16px; 
+    }
+
+    .btn-continue-shopping {
+        padding: 8px 16px; 
+        font-size: 14px;
+    }
+
+    .pedidos {
+        font-size: 14px;
+    }
+
+    .actions-row {
+        flex-direction: row; /* mantém botão e link na mesma linha se couberem */
+        gap: 10px;
+        flex-wrap: nowrap; /* impede quebra dentro da linha */
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+
+

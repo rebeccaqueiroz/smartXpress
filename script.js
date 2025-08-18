@@ -45,4 +45,3 @@ cartButtons.forEach(function (btn1) {
     btn1.classList.toggle('selected');
   });
 });
-
